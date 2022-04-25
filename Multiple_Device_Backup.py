@@ -1,3 +1,13 @@
+from getpass import getpass
+from netmiko import ConnectHandler
+
+#Username = input('Enter your SSH Username: ')
+#Password = input('Enter your SSH Password: ')
+
+
+with open('devices_file') as f:
+    devices_list = f.read().splitlines()
+
 file1 = open("devices_output_New_1.txt", "w")
 
 for devices in devices_list:
